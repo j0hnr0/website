@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;900&family=IBM+Plex+Sans:wght@200;700&display=swap" rel="stylesheet">     
+    <title>Johnrovan - Front-end Developer</title>
+  </head>
+  <body>
+    <header>
+      <nav class="grid-container">
+          <input type="checkbox" id="check">
+          <label for="check" class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+          </label> 
+          <div class="flex-sm-menu-container flex-lg-menu-container">
+            <div id="home" class="flex-sm-menu flex-lg-menu">
+              <i class="fa-solid fa-house"></i>
+              <span> <a href="#section-one">HOME</a></span>
+              <hr class="hr-menu">
+            </div>
+            <div id="about" class="flex-sm-menu flex-lg-menu">
+              <i class="fa-solid fa-address-card"></i>
+              <span> <a href="#section-two">ABOUT</a></span>
+              <hr class="hr-menu">
+            </div>
+            <div id="portfolio" class="flex-sm-menu flex-lg-menu">
+              <i class="fa-regular fa-image"></i> 
+              <span> <a href="#section-three">PORTFOLIO</a></span>
+              <hr class="hr-menu">
+            </div>
+            <div id="contact" class="flex-sm-menu flex-lg-menu">
+              <i class="fa-regular fa-envelope"></i>
+              <span> <a href="#section-five">CONTACT</a></span>
+              <hr class="hr-menu">
+            </div>
+          </div>
+          <hr class="hr-menu-sm hr-menu-lg">       
+      </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="grid-container">
+      <!-- Section #1 -->
+      <section id="section-one" class="grid-sm">
+        <div class="flex-sm grid-tablet-container">
+          <h1 id="john-name">J<span style="color: #e04343;">O</span>HN</h1>
+          <h1 id="rovan-name" style="color: #a1a9b0;">R<span style="color: #ffe800;">O</span>VAN</h1>
+          <p  id="front-end" style="color: #e04343;">F  R  O  N  T - E  N  D   D E V E L O P E R</p>
+          <div class="image-box">
+            <img src="images/me.png" alt="Me sitting on a chair">
+            <div class="see-more">
+              <p>SEE MORE</p><br>
+              <i style="font-size: 3em;" class="fa-solid fa-chevron-down"></i>
+            </div> 
+          </div>
+        </div>
+      </section>
+ 
+      <!-- Section #2 -->
+      <section id="section-two" class="grid-sm">
+        <div class="flex-sm">
+          <p id="title-about" class="hidden"> A LITTLE <span style="color: #ffe800;">ABOUT</span> ME</p>
+          <span class="hidden">- - - - - - - - - - <i class="fa-solid fa-chevron-down"></i> - - - - - - - - - -</span>
+          <br>
+          <br>
+          <p id="about-me" class="hidden">
+            I graduated with a Bachelor of Science in Computer Engineering. 
+            I am the kind of person who loves to <span style="color: #ffe800;">code</span> and build programs. 
+            I have built a mobile app specifically for Android using native Kotlin. However, currently, 
+            I am focusing on front-end development using HTML, CSS, and JavaScript.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section #3 -->
+      <section id="section-three" class="grid-sm">
+        <div class="flex-sm grid-tablet-container">
+          <p class="hidden">PROJECTS</p>
+          <span class="hidden">- - - - - - - - - - <i class="fa-solid fa-chevron-down"></i> - - - - - - - - - -</span>
+          <img id="img1" class="hidden" src="projects-pictures/hilass2 (1).jpg" alt="">
+          <img id="img2" class="hidden" src="projects-pictures/hilass3 (1).jpg" alt="">
+          <img id="img3" class="hidden" src="projects-pictures/hilass5 (1).jpg" alt="">
+          <img id="img4" class="hidden" src="projects-pictures/web1.jpg" alt="">
+          <img id="img5" class="hidden" src="projects-pictures/web2.jpg" alt="">
+          <img id="img6" class="hidden" src="projects-pictures/web4.jpg" alt="">
+          <img id="img7" class="hidden" src="projects-pictures/port1.jpg" alt="">
+          <img id="img8" class="hidden" src="projects-pictures/port2.jpg" alt="">
+        </div>
+      </section>
+
+      <!-- Section #4 -->
+      <section id="section-four" class="grid-sm">
+        <div class="flex-sm">
+          <a href="#section-five">
+            <button>HIRE JOHN ROVAN</button>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section #5 -->
+      <section id="section-five" class="grid-sm">
+        <div class="flex-sm grid-lg-container">
+          <p>DROP <span style="color: #e04343;">ME</span> A LINE</p>
+          <span>- - - - - - - - - - <i class="fa-solid fa-chevron-down"></i> - - - - - - - - - -</span>
+          <div id="address" class="flex-sm">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="contact-border">ADDRESS</span>
+            <span class="margin">Cebu, Philippines</span>
+          </div>
+          <div id="phone" class="flex-sm">
+            <i class="fa-solid fa-phone"></i>
+            <span class="contact-border">PHONE</span>
+            <span class="margin">(+63)915-257-5153</span>
+          </div>
+          <div id="email" class="flex-sm">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="contact-border">EMAIL</span>
+            <span id="test" class="margin">johnrovanvcabucos@gmail.com</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section #6 -->
+      <section id="section-six" class="grid-sm">
+        <div class="flex-sm-for-socmed-icons">
+          <a href="https://www.facebook.com/helloworld221/"> 
+            <div class="bottom-icons">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+          </a>
+          
+          <a href="https://www.linkedin.com/in/john-rovan-cabucos-87640a263/">
+            <div class="bottom-icons">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+          </a>
+        
+          <a href="https://github.com/j0hnr0">
+            <div class="bottom-icons">
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer: All Rights Reserved. c 2023 -->
+      <footer id="footer" class="grid-sm">
+        <div class="flex-sm">
+          <p>All Rights Reserved. &#169; 2023</p>
+        </div>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,686 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;    
+    /* outline: 1px solid black !important; */
+
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+}
+
+#check {
+    display: none;
+}
+
+.hamburger-menu {
+    color: #e04343;
+    font-size: 35px;
+    grid-column: 1/3;
+    position: fixed;
+    z-index: 100;
+}
+
+.hamburger-menu:hover {
+    opacity: 0.4;
+}
+
+label > i {
+    padding-top: 1em;
+    padding-left: 1em;
+    cursor: pointer;
+}
+
+a {
+    text-decoration:none;
+    color: black;
+}
+
+.hr-menu {
+    border-top: dotted 2px;
+    background-color: transparent;
+    width: 70%;
+}
+
+#home:hover, #home:hover a {
+    color: #e04343;
+}
+
+#about:hover, #about:hover a {
+    color: #e04343;
+}
+
+#portfolio:hover, #portfolio:hover a {
+    color: #e04343;
+}
+
+#contact:hover, #contact:hover a {
+    color: #e04343;
+}
+
+
+
+/* Mobile First */
+/* Animate on Scroll animation */
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-5vh);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+#home i, #home span, #home hr {
+    margin-bottom: 0.3em;
+}
+
+#about i, #about span, #about hr {
+    margin-bottom: 0.3em;
+}
+
+#portfolio i, #portfolio span, #portfolio hr {
+    margin-bottom: 0.3em;
+}
+
+#contact i, #contact span, #contact hr {
+    margin-bottom: 0.3em;
+}
+
+.grid-sm {
+    grid-column: 1/13;
+}
+
+.flex-sm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 50%;
+}
+
+.image-box {
+    text-align: center;
+}
+
+#section-one {
+    margin-top: 3em;
+}
+
+#section-one h1 {
+    font-size: 5em;
+    animation: 0.5s linear 0s name-title-up-animation;
+}
+
+#section-one #front-end {
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    font-size: 0.9em;
+    animation: 0.5s linear 0.5s job-title-up-animation, 2s ease 0.5s infinite alternate both running job-title-opacity-animation;
+}
+
+#section-one > div {
+    position: relative;
+}
+
+@keyframes job-title-up-animation {
+    from {
+        transform: translateY(5vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes job-title-opacity-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes name-title-up-animation {
+    from {
+        transform: translateY(-5vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.see-more {
+    position: absolute;
+    color: #ffe800;
+    margin-bottom: 2em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.see-more i {
+    animation: 2s ease 1s infinite alternate both running chevron-animation;
+}
+
+@keyframes chevron-animation {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(5vh);
+    }
+}
+
+/* Section #2 */
+#section-two {
+    background-color: #e04343;
+    color: white;
+    padding: 7em 1em 7em 1em;
+}
+
+#section-two #title-about {
+    letter-spacing: 0.3rem;
+    font-size: 1.2rem;
+} 
+
+#section-two i {
+    color: black;
+}
+
+#section-two #about-me {
+    text-align: center;
+    word-spacing: 0.2rem;
+}
+
+/* Section #3 */
+
+#section-three {
+    padding: 7em 1em 0em 1em;
+}
+
+#section-three p {
+    color: #e04343;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+}
+
+#section-three span {
+    padding-bottom: 5em;
+}
+
+#section-three img {
+    max-width: 100%;
+    margin-bottom: 1em;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+/* Section #4 */
+#section-four {
+    background-color: #e04343;
+    padding: 4em 1em 4em 1em;
+}
+
+#section-four button {
+    color: #ffe800;
+    font-weight: bold;
+    background-color: transparent;
+    width: 200px;
+    height: 60px;
+    border: 1px solid #ffe800;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#section-four button:hover {
+    color: black;
+    border-color: black;
+    background-color: #ffe800;
+}
+
+/* Section #5 */
+
+#section-five {
+    padding: 7em 1em 3em 1em;
+}
+
+#section-five p {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+}
+
+#section-five > div div {
+    width: 90%;
+    border: 0.5px solid black;
+    padding-top: 1em;
+    box-shadow: 10px 5px 5px #e04343;
+    margin-bottom: 1em;
+}
+
+.margin {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.contact-border {
+    border-bottom: 0.5px solid grey;
+}
+
+#address {
+    margin-top: 5em;
+}
+
+/* Section #6 */
+
+.flex-sm-for-socmed-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom-icons {
+    background-color: #e04343;
+    color: white;
+    text-align: center;
+    width: 35px;
+    padding: 0.3em 0 0.3em 0;
+    transition: all 0.5s;
+}
+
+.bottom-icons:hover {
+    background-color: #ffe800;
+    color: #e04343;
+}
+
+footer {
+    padding: 7em 0em 1em 0em;
+}
+
+@media screen and (min-width: 375px) {
+    #section-one h1 {
+        font-size: 6em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /*Hamburger menu */
+    #check:checked ~ .flex-sm-menu-container {
+        visibility: visible;
+        height: 100%;
+        background-color: white;
+    }
+
+    #check:checked ~ div.flex-sm-menu-container .flex-sm-menu {
+        height: 70px;
+    }
+
+    .hr-menu-sm {
+        display: none;
+    }
+
+
+    .flex-sm-menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        visibility: hidden;
+        grid-column: 1/13;
+        height: 0px;
+        position: fixed;
+        z-index: 1;
+        transition: background-color 1s, visibility 1s;
+        margin-right: 50%;
+        padding-top: 20%;
+        width: 100%;
+    }
+
+    .flex-sm-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 0px;
+        transition: height 1s;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .grid-tablet-container {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0,1fr));
+    }
+
+    #section-one div h1, #section-one div p {
+        grid-column: 1/6;
+        grid-row: 1;
+    }
+
+    #section-one .image-box {
+        grid-column: 6/13;
+    }
+
+    #section-one img {
+        max-width: 70%;
+    }
+
+    #john-name {
+        margin-bottom: 2em;
+        margin-left: 1em;
+    }
+
+    #rovan-name {
+        margin-left: 1em;
+    }
+
+    #front-end {
+        margin-top: 9em;
+        margin-left: 7em;
+        padding-right: 5em;
+    }
+
+    #section-three p, #section-three span {
+        grid-column: 1/13;
+        text-align: center;
+    }
+
+    #section-three img {
+        height: 350px;
+        width: 500px;
+        margin-bottom: 0em;
+    }
+
+    #img1 {
+        grid-column: 1/7;
+    }
+
+    #img2 {
+        grid-column: 7/13;
+    }
+
+    #img3 {
+        grid-column: 1/7;
+    }
+
+    #img4 {
+        grid-column: 7/13;
+    }
+
+    #img5 {
+        grid-column: 1/7;
+    }
+
+    #img6 {
+        grid-column: 7/13;
+    }
+
+    #img7 {
+        grid-column: 1/7;
+    }
+
+    #img8 {
+        grid-column: 7/13;
+    }
+
+    /* Hamburger Menu */
+    #check:checked ~ div.flex-lg-menu-container{
+        visibility: visible;
+        width: 100%;
+        opacity: 1;
+        
+    }
+
+    .flex-lg-menu-container {
+        grid-column: 1/13;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: space-evenly;
+        position: fixed;
+        z-index: 99;
+        background-color: white;
+        width: 0%;
+        padding-left: 20em;
+        visibility: hidden;
+        opacity: 0;
+        padding-top: 1.6em;
+        transition: width 1s, visibility 1s, opacity 1.5s;
+    }
+
+    .flex-lg-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hr-menu-lg {
+        width: 0%;
+        grid-column: 1/13;
+        padding-top: 5.1em;
+        top: 0;
+        left: 0;
+        z-index: 97;
+        position:fixed;
+        border-bottom-color: #e04343;
+        transition: width 1s, visibility 1s;
+        visibility: hidden;
+    }
+
+    #check:checked ~ hr.hr-menu-lg {
+        width: 100%;
+        visibility: visible;
+    }
+
+    /* End of hamburger menu */
+}
+
+@media screen and (min-width: 1024px) {
+
+    #section-one h1 {
+        font-size: 7em;
+    }
+
+    #section-one #front-end {
+        font-size: 1em;
+    }
+
+    #john-name {
+        margin-bottom: 3em;
+        margin-left: 1em;
+    }
+
+    #rovan-name {
+        margin-left: 1em;
+        margin-bottom: 1em;
+    }
+
+    #front-end {
+        margin-top: 9em;
+        margin-left: 7.5em;
+        margin-bottom: 8em;
+        padding-right: 0em;
+    }
+
+    #section-two {
+        padding-left: 15em;
+        padding-right: 15em;
+    }
+
+    #img1 {
+        grid-column: 1/4;
+    }
+
+    #img2 {
+        grid-column: 4/7;
+    }
+
+    #img3 {
+        grid-column: 7/10;
+    }
+
+    #img4 {
+        grid-column: 10/13;
+    }
+
+    #img5 {
+        grid-column: 1/4;
+    }
+
+    #img6 {
+        grid-column: 4/7;
+    }
+
+    #img7 {
+        grid-column: 7/10;
+    }
+
+    #img8 {
+        grid-column: 10/13;
+    }
+
+    #section-three {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+
+    .grid-lg-container {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0,1fr));
+    }
+
+    #section-five > div.grid-lg-container > p, #section-five > div.grid-lg-container > span {
+        grid-column: 1/13;
+        text-align: center;
+    }
+
+    #address {
+        grid-column: 1/5;
+        margin-top: 0em;
+    }
+
+    #phone {
+        grid-column: 5/9;
+    }
+
+    #email {
+        grid-column: 9/13;
+    }
+
+    #section-five > div.grid-lg-container > span {
+        margin-bottom: 5em;
+    }
+
+    #section-five {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #section-one img {
+        max-width: 60%;
+    }
+
+    
+    #john-name {
+        margin-bottom: 3em;
+        margin-left: 1.5em;
+    }
+
+    #rovan-name {
+        margin-left: 1.5em;
+    }
+
+    #front-end {
+        margin-top: 9em;
+        margin-left: 12.5em;
+    }
+
+    #section-one h1 {
+        font-size: 8em;
+    }
+    
+    #section-one #front-end {
+        letter-spacing: 0.1rem;
+        font-size: 1em;
+    }
+    
+    #section-two {
+        padding-left: 21em;
+        padding-right: 21em;
+    }
+
+    #section-three {
+        padding-left: 8em;
+        padding-right: 8em;
+    }
+
+    #section-five {
+        padding-right: 10em;
+        padding-left: 10em;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    #section-one img {
+        max-width: 40%;
+    }
+
+    #john-name {
+        margin-bottom: 3em;
+        margin-left: 5em;
+    }
+
+    #rovan-name {
+        margin-left: 5em;
+    }
+
+    #front-end {
+        margin-top: 9em;
+        margin-left: 40.5em;
+    }
+
+    #section-two {
+        padding-left: 53em;
+        padding-right: 53em;
+    }
+
+    #section-three {
+        padding-left: 40em;
+        padding-right: 40em;
+    }
+
+    #section-five {
+        padding-left: 45em;
+        padding-right: 45em;
+    }
+
+    #section-six {
+        padding-left: 45em;
+        padding-right: 45em;
+    }
+}
